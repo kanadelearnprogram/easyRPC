@@ -1,13 +1,18 @@
 package com.kanade.provider;
 
-import com.kanade.common.model.User;
+
 import com.kanade.common.service.UserService;
-import com.kanade.easyrpc.registry.LocalRegistry;
-import com.kanade.easyrpc.server.HttpServer;
-import com.kanade.easyrpc.server.VertxHttpServer;
+import easyrpc.RPCApplication;
+import easyrpc.config.RPCConfig;
+import easyrpc.registry.LocalRegistry;
+import easyrpc.server.HttpServer;
+import easyrpc.server.VertxHttpServer;
+import easyrpc.utils.ConfigUtils;
+
 
 public class EasyProvider {
     public static void main(String[] args) {
+        RPCApplication.init();
         // registry
         LocalRegistry.register(UserService.class.getName(), UserServiceImpl.class);
 
@@ -15,6 +20,7 @@ public class EasyProvider {
         // provide service
         HttpServer httpServer = new VertxHttpServer();
 
-        httpServer.start(8080);
+        httpServer.start(RPCApplication.getRpcConfig().getServerPort());
+        //httpServer.start(8080);
     }
 }

@@ -11,7 +11,7 @@
     <dependencies>
         <dependency>
             <groupId>com.kanade</groupId>
-            <artifactId>easyRPC</artifactId>
+            <artifactId>easyRPCcore</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
