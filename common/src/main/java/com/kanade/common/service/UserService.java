@@ -4,4 +4,7 @@ import com.kanade.common.model.User;
 
 public interface UserService {
     User getUser(User user);
+    default short getNum(){
+        return 1;
+    }
 }

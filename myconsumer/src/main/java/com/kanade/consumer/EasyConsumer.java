@@ -4,6 +4,7 @@ import com.kanade.common.model.User;
 import com.kanade.common.service.UserService;
 import easyrpc.RPCApplication;
 import easyrpc.config.RPCConfig;
+import easyrpc.proxy.ServiceProxyFactory;
 import easyrpc.utils.ConfigUtils;
 
 import java.util.Optional;
@@ -23,5 +24,7 @@ public class EasyConsumer {
         }else {
             System.out.println("null");
         }
+        short t = userService.getNum();
+        System.out.println(t);
     }
 }
