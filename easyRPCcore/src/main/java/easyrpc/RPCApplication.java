@@ -1,7 +1,10 @@
 package easyrpc;
 
 import easyrpc.config.RPCConfig;
+import easyrpc.config.RegistryConfig;
 import easyrpc.constant.RPCConstant;
+import easyrpc.registry.Registry;
+import easyrpc.registry.RegistryFactory;
 import easyrpc.utils.ConfigUtils;
 import lombok.extern.slf4j.Slf4j;
 
@@ -12,6 +15,11 @@ public class RPCApplication {
     public static void init(RPCConfig rpcConfig1){
         rpcConfig = rpcConfig1;
         log.info("rpc init {}",rpcConfig1.toString());
+
+        RegistryConfig registryConfig = rpcConfig1.getRegistryConfig();
+        Registry registry = RegistryFactory.getInstance(registryConfig.getRegistry());
+        registry.init(registryConfig);
+        log.info("init registry config {}",registryConfig);
     }
 
     public static void init(){

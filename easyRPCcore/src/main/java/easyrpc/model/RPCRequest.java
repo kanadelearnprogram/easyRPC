@@ -1,5 +1,6 @@
 package easyrpc.model;
 
+import easyrpc.constant.RPCConstant;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -35,5 +36,6 @@ public class RPCRequest implements Serializable {
      */
     private Object[] args;
 
+    private String serviceVersion = RPCConstant.DEFAULT_SERVICE_VERSION;
 
 }
