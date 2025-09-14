@@ -24,7 +24,7 @@ public class EasyConsumer {
         }else {
             System.out.println("null");
         }
-        short t = userService.getNum();
-        System.out.println(t);
+        //short t = userService.getNum();
+        //System.out.println(t);
     }
 }

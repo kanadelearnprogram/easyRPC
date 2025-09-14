@@ -2,11 +2,13 @@ package easyrpc.server;
 
 
 
+import easyrpc.RPCApplication;
 import easyrpc.model.RPCRequest;
 import easyrpc.model.RPCResponse;
 import easyrpc.registry.LocalRegistry;
 import easyrpc.serializer.JDKSerializer;
 import easyrpc.serializer.Serializer;
+import easyrpc.serializer.SerializerFactory;
 import io.vertx.core.Handler;
 import io.vertx.core.buffer.Buffer;
 import io.vertx.core.http.HttpServerRequest;
@@ -25,7 +27,7 @@ public class HttpServerHandler implements Handler<HttpServerRequest> {
      */
     @Override
     public void handle(HttpServerRequest httpServerRequest) {
-        Serializer serializer = new JDKSerializer();
+        Serializer serializer = SerializerFactory.getInstance(RPCApplication.getRpcConfig().getSerializer());
         System.out.println(httpServerRequest);
         httpServerRequest.bodyHandler(body -> {
             byte[] bytes = body.getBytes();

@@ -1,0 +1,4 @@
+a=com.kanade.easyRPC.serializer.JdkSerializer
+b=com.kanade.easyRPC.serializer.HessianSerializer
+c=com.kanade.easyRPC.serializer.JsonSerializer
+d=com.kanade.easyRPC.serializer.KryoSerializer

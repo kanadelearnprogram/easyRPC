@@ -3,10 +3,12 @@ package easyrpc.proxy;
 import cn.hutool.http.HttpRequest;
 import cn.hutool.http.HttpResponse;
 
+import easyrpc.RPCApplication;
 import easyrpc.model.RPCRequest;
 import easyrpc.model.RPCResponse;
 import easyrpc.serializer.JDKSerializer;
 import easyrpc.serializer.Serializer;
+import easyrpc.serializer.SerializerFactory;
 
 
 import java.io.IOException;
@@ -16,7 +18,7 @@ import java.lang.reflect.Method;
 public class ServiceProxy implements InvocationHandler {
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-        Serializer serializer = new JDKSerializer();
+        Serializer serializer = SerializerFactory.getInstance(RPCApplication.getRpcConfig().getSerializer());
 
         RPCRequest request = RPCRequest.builder()
                 .serviceName(method.getDeclaringClass().getName())
