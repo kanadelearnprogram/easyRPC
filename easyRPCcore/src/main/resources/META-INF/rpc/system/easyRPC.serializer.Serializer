@@ -1,4 +1,0 @@
-jdk=easyrpc.serializer.JdkSerializer
-hessian=easyrpc.serializer.HessianSerializer
-json=easyrpc.serializer.JsonSerializer
-kryo=easyrpc.serializer.KryoSerializer
