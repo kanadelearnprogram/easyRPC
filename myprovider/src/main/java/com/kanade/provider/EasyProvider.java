@@ -2,16 +2,15 @@ package com.kanade.provider;
 
 
 import com.kanade.common.service.UserService;
-import easyrpc.RPCApplication;
-import easyrpc.config.RPCConfig;
-import easyrpc.config.RegistryConfig;
-import easyrpc.model.ServiceMetaInfo;
-import easyrpc.registry.LocalRegistry;
-import easyrpc.registry.Registry;
-import easyrpc.registry.RegistryFactory;
-import easyrpc.server.HttpServer;
-import easyrpc.server.VertxHttpServer;
-import easyrpc.utils.ConfigUtils;
+import com.kanade.easyrpc.RPCApplication;
+import com.kanade.easyrpc.config.RPCConfig;
+import com.kanade.easyrpc.config.RegistryConfig;
+import com.kanade.easyrpc.model.ServiceMetaInfo;
+import com.kanade.easyrpc.registry.LocalRegistry;
+import com.kanade.easyrpc.registry.Registry;
+import com.kanade.easyrpc.registry.RegistryFactory;
+import com.kanade.easyrpc.server.HttpServer;
+import com.kanade.easyrpc.server.VertxHttpServer;
 
 
 public class EasyProvider {
@@ -28,6 +27,7 @@ public class EasyProvider {
         serviceMetaInfo.setServiceName(UserService.class.getName());
         serviceMetaInfo.setServiceHost(rpcConfig.getServerHost());
         serviceMetaInfo.setServicePort(rpcConfig.getServerPort());
+
         try {
             registry.register(serviceMetaInfo);
         } catch (Exception e) {

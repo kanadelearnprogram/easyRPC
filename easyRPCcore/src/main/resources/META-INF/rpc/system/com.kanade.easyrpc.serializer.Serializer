@@ -1,4 +1,4 @@
-jdk=com.kanade.easyrpc.serializer.JdkSerializer
+jdk=com.kanade.easyrpc.serializer.JDKSerializer
 hessian=com.kanade.easyrpc.serializer.HessianSerializer
-json=com.kanade.easyrpc.serializer.JsonSerializer
+json=com.kanade.easyrpc.serializer.JSONSerializer
 kryo=com.kanade.easyrpc.serializer.KryoSerializer

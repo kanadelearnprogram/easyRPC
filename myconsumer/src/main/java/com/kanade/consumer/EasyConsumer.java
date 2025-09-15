@@ -2,12 +2,9 @@ package com.kanade.consumer;
 
 import com.kanade.common.model.User;
 import com.kanade.common.service.UserService;
-import easyrpc.RPCApplication;
-import easyrpc.config.RPCConfig;
-import easyrpc.proxy.ServiceProxyFactory;
-import easyrpc.utils.ConfigUtils;
-
-import java.util.Optional;
+import com.kanade.easyrpc.config.RPCConfig;
+import com.kanade.easyrpc.proxy.ServiceProxyFactory;
+import com.kanade.easyrpc.utils.ConfigUtils;
 
 public class EasyConsumer {
     public static void main(String[] args) {

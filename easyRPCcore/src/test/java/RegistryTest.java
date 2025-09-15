@@ -1,8 +1,8 @@
 
-import easyrpc.config.RegistryConfig;
-import easyrpc.model.ServiceMetaInfo;
-import easyrpc.registry.EtcdRegistry;
-import easyrpc.registry.Registry;
+import com.kanade.easyrpc.config.RegistryConfig;
+import com.kanade.easyrpc.model.ServiceMetaInfo;
+import com.kanade.easyrpc.registry.EtcdRegistry;
+import com.kanade.easyrpc.registry.Registry;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

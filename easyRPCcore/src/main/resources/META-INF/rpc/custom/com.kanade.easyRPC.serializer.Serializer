@@ -1,4 +1,4 @@
-a=com.kanade.easyRPC.serializer.JdkSerializer
-b=com.kanade.easyRPC.serializer.HessianSerializer
-c=com.kanade.easyRPC.serializer.JsonSerializer
-d=com.kanade.easyRPC.serializer.KryoSerializer
+a=com.kanade.easyrpc.serializer.JDKSerializer
+b=com.kanade.easyrpc.serializer.HessianSerializer
+c=com.kanade.easyrpc.serializer.JSONSerializer
+d=com.kanade.easyrpc.serializer.KryoSerializer
