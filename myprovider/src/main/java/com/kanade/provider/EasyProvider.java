@@ -10,6 +10,7 @@ import com.kanade.easyrpc.registry.LocalRegistry;
 import com.kanade.easyrpc.registry.Registry;
 import com.kanade.easyrpc.registry.RegistryFactory;
 import com.kanade.easyrpc.server.HttpServer;
+import com.kanade.easyrpc.server.TcpServer;
 import com.kanade.easyrpc.server.VertxHttpServer;
 
 
@@ -35,9 +36,11 @@ public class EasyProvider {
         }
 
         // provide service
-        HttpServer httpServer = new VertxHttpServer();
+        /*HttpServer httpServer = new VertxHttpServer();
 
-        httpServer.start(RPCApplication.getRpcConfig().getServerPort());
+        httpServer.start(RPCApplication.getRpcConfig().getServerPort());*/
         //httpServer.start(8080);
+        TcpServer vertxTcpServer = new TcpServer();
+        vertxTcpServer.start(8080);
     }
 }

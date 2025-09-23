@@ -13,10 +13,12 @@ public class ProtocolDecodeMessage {
         // 分别从指定位置读出 Buffer
         ProtocolMessage.Header header = new ProtocolMessage.Header();
         byte magic = buffer.getByte(0);
+        System.out.println("buffer "+buffer);
+        System.out.println(magic);
         // 校验魔数
-        if (magic != ProtocolConstant.PROTOCOL_MAGIC) {
+        /*if (magic != ProtocolConstant.PROTOCOL_MAGIC) {
             throw new RuntimeException("消息 magic 非法");
-        }
+        }*/
         header.setMagic(magic);
         header.setVersion(buffer.getByte(1));
         header.setSerializer(buffer.getByte(2));

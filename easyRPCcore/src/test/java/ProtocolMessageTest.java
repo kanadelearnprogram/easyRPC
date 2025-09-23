@@ -34,6 +34,7 @@ public class ProtocolMessageTest {
 
         Buffer encodeBuffer = ProtocolEncodeMessage.encode(protocolMessage);
         ProtocolMessage<?> message = ProtocolDecodeMessage.decode(encodeBuffer);
+        System.out.println(message);
         Assert.assertNotNull(message);
     }
 
