@@ -8,7 +8,7 @@ public class RegistryConfig {
     private String address = "http://localhost:2379";
     private String username;
     private String password;
-    private Long timeout = 1000000L;
+    private Long timeout = 10000L;
 
 
 }

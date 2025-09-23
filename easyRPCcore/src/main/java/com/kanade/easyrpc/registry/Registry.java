@@ -12,4 +12,6 @@ public interface Registry {
     void unregister(ServiceMetaInfo serviceMetaInfo);
     List<ServiceMetaInfo> serviceDiscover(String serviceKey);
     void destroy();
+    void beats();
+    void watch(String s);
 }

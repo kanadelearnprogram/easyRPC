@@ -20,6 +20,7 @@ public class RPCApplication {
         Registry registry = RegistryFactory.getInstance(registryConfig.getRegistry());
         registry.init(registryConfig);
         log.info("init registry config {}",registryConfig);
+        Runtime.getRuntime().addShutdownHook(new Thread(() -> registry.destroy()));
     }
 
     public static void init(){
